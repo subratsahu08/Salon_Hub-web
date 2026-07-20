@@ -1,0 +1,799 @@
+/*==========================================================
+        ANIMATIONS.CSS
+        PART 1
+==========================================================*/
+
+/*=========================
+        FADE UP
+=========================*/
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*=========================
+        FADE LEFT
+=========================*/
+
+.fade-left{
+
+    opacity:0;
+
+    transform:translateX(-80px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.fade-left.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/*=========================
+        FADE RIGHT
+=========================*/
+
+.fade-right{
+
+    opacity:0;
+
+    transform:translateX(80px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.fade-right.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/*=========================
+        ZOOM IN
+=========================*/
+
+.zoom{
+
+    opacity:0;
+
+    transform:scale(.8);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.zoom.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+/*=========================
+        ROTATE IN
+=========================*/
+
+.rotate-in{
+
+    opacity:0;
+
+    transform:rotate(-8deg) scale(.9);
+
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+
+}
+
+.rotate-in.show{
+
+    opacity:1;
+
+    transform:rotate(0deg) scale(1);
+
+}
+
+/*=========================
+        STAGGER
+=========================*/
+
+.delay-1{
+
+    transition-delay:.1s;
+
+}
+
+.delay-2{
+
+    transition-delay:.2s;
+
+}
+
+.delay-3{
+
+    transition-delay:.3s;
+
+}
+
+.delay-4{
+
+    transition-delay:.4s;
+
+}
+
+.delay-5{
+
+    transition-delay:.5s;
+
+}
+
+/*=========================
+        FLOAT
+=========================*/
+
+.float{
+
+    animation:floatAnimation 5s ease-in-out infinite;
+
+}
+
+.float-slow{
+
+    animation:floatSlow 8s ease-in-out infinite;
+
+}
+
+.float-fast{
+
+    animation:floatFast 3s ease-in-out infinite;
+
+}
+
+/*=========================
+        PULSE
+=========================*/
+
+.pulse{
+
+    animation:pulse 2.5s infinite;
+
+}
+
+.pulse-gold{
+
+    animation:pulseGold 3s infinite;
+
+}
+
+/*=========================
+        SHINE
+=========================*/
+
+.shine{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.shine::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    transform:skewX(-25deg);
+
+    background:linear-gradient(
+
+        to right,
+
+        transparent,
+
+        rgba(255,255,255,.25),
+
+        transparent
+
+    );
+
+}
+
+.shine:hover::before{
+
+    animation:shineMove 1s;
+
+}
+
+/*=========================
+        GLOW
+=========================*/
+
+.glow{
+
+    transition:.4s;
+
+}
+
+.glow:hover{
+
+    box-shadow:
+
+        0 0 20px rgba(212,175,55,.25),
+
+        0 0 40px rgba(212,175,55,.12);
+
+}
+
+/*=========================
+        HOVER LIFT
+=========================*/
+
+.hover-up{
+
+    transition:.35s;
+
+}
+
+.hover-up:hover{
+
+    transform:translateY(-12px);
+
+}
+
+/*=========================
+        HOVER SCALE
+=========================*/
+
+.hover-scale{
+
+    transition:.35s;
+
+}
+
+.hover-scale:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*=========================
+        KEYFRAMES
+=========================*/
+
+@keyframes floatAnimation{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floatSlow{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floatFast{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-24px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes shineMove{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:140%;
+
+    }
+
+}
+
+/*==========================================================
+        ANIMATIONS.CSS
+        PART 2
+==========================================================*/
+
+/*=========================
+        GOLD GLOW
+=========================*/
+
+@keyframes pulseGold{
+
+    0%{
+
+        box-shadow:
+            0 0 0 rgba(212,175,55,0);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 20px rgba(212,175,55,.45),
+            0 0 45px rgba(212,175,55,.18);
+
+    }
+
+    100%{
+
+        box-shadow:
+            0 0 0 rgba(212,175,55,0);
+
+    }
+
+}
+
+/*=========================
+        FADE
+=========================*/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+.fade-in{
+
+    animation:fadeIn .8s ease forwards;
+
+}
+
+/*=========================
+        SLIDE UP
+=========================*/
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.slide-up{
+
+    animation:slideUp .8s ease forwards;
+
+}
+
+/*=========================
+        SLIDE DOWN
+=========================*/
+
+@keyframes slideDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.slide-down{
+
+    animation:slideDown .8s ease forwards;
+
+}
+
+/*=========================
+        SLIDE LEFT
+=========================*/
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.slide-left{
+
+    animation:slideLeft .8s ease forwards;
+
+}
+
+/*=========================
+        SLIDE RIGHT
+=========================*/
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.slide-right{
+
+    animation:slideRight .8s ease forwards;
+
+}
+
+/*=========================
+        SCALE IN
+=========================*/
+
+@keyframes scaleIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.75);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+.scale-in{
+
+    animation:scaleIn .7s ease forwards;
+
+}
+
+/*=========================
+        ROTATE
+=========================*/
+
+@keyframes rotate360{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+.rotate{
+
+    animation:rotate360 12s linear infinite;
+
+}
+
+/*=========================
+        BOUNCE
+=========================*/
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    25%{
+
+        transform:translateY(-12px);
+
+    }
+
+    50%{
+
+        transform:translateY(0);
+
+    }
+
+    75%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.bounce{
+
+    animation:bounce 2.5s infinite;
+
+}
+
+/*=========================
+        ICON POP
+=========================*/
+
+.icon-pop{
+
+    transition:.35s ease;
+
+}
+
+.icon-pop:hover{
+
+    transform:scale(1.15) rotate(8deg);
+
+}
+
+/*=========================
+        CARD HOVER
+=========================*/
+
+.card-hover{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.card-hover:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35),
+        0 0 25px rgba(212,175,55,.12);
+
+}
+
+/*=========================
+        BUTTON PRESS
+=========================*/
+
+.press{
+
+    transition:transform .15s ease;
+
+}
+
+.press:active{
+
+    transform:scale(.96);
+
+}
+
+/*=========================
+        IMAGE ZOOM
+=========================*/
+
+.img-zoom{
+
+    overflow:hidden;
+
+}
+
+.img-zoom img{
+
+    transition:transform .5s ease;
+
+}
+
+.img-zoom:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*=========================
+        TEXT GRADIENT
+=========================*/
+
+.text-glow{
+
+    transition:.4s;
+
+}
+
+.text-glow:hover{
+
+    color:#D4AF37;
+
+    text-shadow:
+
+        0 0 8px rgba(212,175,55,.5),
+
+        0 0 20px rgba(212,175,55,.25);
+
+}
+
+/*=========================
+        SOFT BLUR
+=========================*/
+
+.blur-hover{
+
+    transition:filter .4s ease;
+
+}
+
+.blur-hover:hover{
+
+    filter:blur(1px);
+
+}
