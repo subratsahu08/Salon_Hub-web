@@ -122,14 +122,70 @@ section{
 }
 
 /*=========================
-        NAVBAR
+        MOBILE NAVBAR
 =========================*/
 
 .menu-btn{
 
-    display:block;
+    display:flex;
 
-    z-index:1001;
+    align-items:center;
+
+    justify-content:center;
+
+    width:52px;
+
+    height:52px;
+
+    background:#111;
+
+    border:2px solid #D4AF37;
+
+    border-radius:14px;
+
+    color:#D4AF37;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.nav-container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    gap:15px;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo img{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+.logo span{
+
+    font-size:28px;
+
+    font-weight:700;
 
 }
 
@@ -137,37 +193,67 @@ nav{
 
     position:fixed;
 
-    top:85px;
+    top:90px;
 
-    right:-100%;
+    left:-320px;
 
     width:300px;
 
-    height:calc(100vh - 85px);
+    background:#111;
 
-    background:#101010;
+    border-radius:0 18px 18px 0;
 
-    border-left:1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(212,175,55,.2);
 
-    transition:.4s;
+    transition:.35s;
 
-    padding:40px 30px;
+    z-index:999;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+    padding:15px 0;
 
 }
 
 nav.active{
 
-    right:0;
+    left:0;
 
 }
 
 nav ul{
 
+    display:flex;
+
     flex-direction:column;
 
-    align-items:flex-start;
+}
 
-    gap:30px;
+nav li{
+
+    list-style:none;
+
+}
+
+nav a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:22px 28px;
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+nav li:not(:last-child){
+
+    border-bottom:1px solid rgba(255,255,255,.08);
 
 }
 
