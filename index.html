@@ -6,12 +6,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SalonHub | Smart Salon Booking Platform</title>
+    <title>SalonHub | Premium Salon Booking Platform</title>
 
     <meta name="description"
-        content="Book salon appointments, discover nearby salons and experience premium grooming with SalonHub.">
+        content="SalonHub is a premium salon booking platform that helps customers discover nearby salons, book appointments instantly, and enjoy a seamless grooming experience.">
 
-    <!-- Google Font -->
+    <meta name="keywords"
+        content="SalonHub, Salon Booking, Haircut Booking, Barber App, Beauty Salon, Men's Salon, Appointment Booking">
+
+    <meta name="author" content="SalonHub">
+
+    <meta name="theme-color" content="#090909">
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -24,84 +33,19 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.8.0/css/all.min.css">
 
-    <!-- CSS -->
+    <!-- Styles -->
 
     <link rel="stylesheet" href="css/style.css">
-
     <link rel="stylesheet" href="css/animations.css">
-
     <link rel="stylesheet" href="css/responsive.css">
-    <style>
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            margin-bottom: 22px;
-        }
-
-        .footer-logo img {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
-        }
-
-        .footer-logo span {
-            color: #D4AF37;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .store-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .store-btn {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 14px 18px;
-            text-decoration: none;
-            color: #fff;
-            background: rgba(255, 255, 255, .06);
-            border: 1px solid rgba(255, 255, 255, .08);
-            border-radius: 16px;
-            transition: .3s;
-        }
-
-        .store-btn:hover {
-            background: #D4AF37;
-            color: #111;
-            transform: translateY(-4px);
-        }
-
-        .store-btn i {
-            font-size: 2rem;
-        }
-
-        .store-btn small {
-            display: block;
-            font-size: .7rem;
-            letter-spacing: 1px;
-            opacity: .8;
-        }
-
-        .store-btn span {
-            font-size: 1rem;
-            font-weight: 600;
-        }
-    </style>
 
 </head>
 
 <body>
 
-    <!--================ Loader ================-->
+    <!--================ LOADER ================-->
 
-    <div id="loader">
+    <div id="loader" aria-hidden="true">
 
         <div class="loader-circle"></div>
 
@@ -109,28 +53,25 @@
 
     </div>
 
-    <!--================ Header ================-->
+    <!--================ HEADER ================-->
 
-    <header>
+    <header id="header">
 
-        <div class="nav-container">
-
-            <!-- Mobile Menu Button -->
-            <button class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
+        <div class="container nav-container">
 
             <!-- Logo -->
-            <div class="logo">
 
-                <img src="images/logo.png" alt="SalonHub">
+            <a href="#home" class="logo" aria-label="SalonHub Home">
+
+                <img src="images/logo.png" alt="SalonHub Logo">
 
                 <span>SalonHub</span>
 
-            </div>
+            </a>
 
-            <!-- Desktop Navigation -->
-            <nav>
+            <!-- Navigation -->
+
+            <nav id="navbar">
 
                 <ul>
 
@@ -150,29 +91,29 @@
 
                     <li>
                         <a href="#screenshots">
-                            <i class="fas fa-image"></i>
+                            <i class="fas fa-mobile-screen-button"></i>
                             Screenshots
                         </a>
                     </li>
 
                     <li>
-                        <a href="#about">
-                            <i class="fas fa-circle-info"></i>
-                            About
+                        <a href="#how">
+                            <i class="fas fa-list-check"></i>
+                            How It Works
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#faq">
+                            <i class="fas fa-circle-question"></i>
+                            FAQ
                         </a>
                     </li>
 
                     <li>
                         <a href="#contact">
-                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-envelope"></i>
                             Contact
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#download">
-                            <i class="fas fa-download"></i>
-                            Download APK
                         </a>
                     </li>
 
@@ -180,62 +121,82 @@
 
             </nav>
 
+            <!-- Right Actions -->
+
+            <div class="nav-actions">
+
+                <a href="apk/SalonHub.apk" class="download-btn" download>
+
+                    <i class="fas fa-download"></i>
+
+                    Download APK
+
+                </a>
+
+                <button class="menu-btn" aria-label="Open Menu" aria-expanded="false" aria-controls="navbar">
+
+                    <i class="fas fa-bars"></i>
+
+                </button>
+
+            </div>
+
         </div>
 
     </header>
-    <!--================ Hero Section ================-->
+    <!--================ HERO SECTION ================-->
 
     <section class="hero" id="home">
 
         <div class="container hero-container">
 
+            <!-- Left Content -->
+
             <div class="hero-left">
 
                 <span class="tag">
-
-                    Premium Salon Experience
-
+                    Premium Grooming Experience
                 </span>
 
                 <h1>
 
-                    India's Smart
+                    Book Your Next
 
-                    <span>Salon Booking</span>
+                    <span>Salon Visit</span>
 
-                    Platform
+                    In Seconds
 
                 </h1>
 
                 <p>
 
-                    Discover premium salons, book appointments instantly,
-
-                    manage bookings, and enjoy hassle-free grooming through
-
-                    SalonHub.
+                    SalonHub helps you discover trusted salons, compare services,
+                    book appointments instantly, receive real-time notifications,
+                    and enjoy a seamless grooming experience—all from one app.
 
                 </p>
 
                 <div class="hero-buttons">
 
-                    <a href="apk/SalonHub.apk" class="btn-primary">
+                    <a href="apk/SalonHub.apk" class="btn-primary" download>
 
-                        <i class="fa-solid fa-download"></i>
+                        <i class="fas fa-download"></i>
 
                         Download APK
 
                     </a>
 
-                    <a href="#" class="btn-secondary">
+                    <a href="#features" class="btn-secondary">
 
-                        <i class="fa-solid fa-play"></i>
+                        <i class="fas fa-circle-play"></i>
 
-                        Watch Demo
+                        Explore Features
 
                     </a>
 
                 </div>
+
+                <!-- Statistics -->
 
                 <div class="hero-stats">
 
@@ -251,7 +212,7 @@
 
                         <h2>300+</h2>
 
-                        <span>Salons</span>
+                        <span>Partner Salons</span>
 
                     </div>
 
@@ -259,7 +220,7 @@
 
                         <h2>4.9★</h2>
 
-                        <span>Rating</span>
+                        <span>User Rating</span>
 
                     </div>
 
@@ -267,19 +228,62 @@
 
             </div>
 
+            <!-- Right Side -->
+
             <div class="hero-right">
 
-                <img src="images/hero/mobile.png" alt="SalonHub App">
+                <img src="images/hero/mobile.png" alt="SalonHub mobile application">
+
+                <div class="hero-card card-top">
+
+                    <h4>
+
+                        <i class="fas fa-calendar-check"></i>
+
+                        Instant Booking
+
+                    </h4>
+
+                    <p>
+                        Book appointments in under a minute.
+                    </p>
+
+                </div>
+
+                <div class="hero-card card-bottom">
+
+                    <h4>
+
+                        <i class="fas fa-location-dot"></i>
+
+                        Nearby Salons
+
+                    </h4>
+
+                    <p>
+                        Find trusted salons around you instantly.
+                    </p>
+
+                </div>
 
             </div>
 
         </div>
 
+        <!-- Scroll Indicator -->
+
+        <div class="scroll-down">
+
+            <small>SCROLL</small>
+
+            <span></span>
+
+        </div>
+
     </section>
+    <!--================ WHY SALONHUB ================-->
 
-    <!--================ Why Choose ================-->
-
-    <section class="why">
+    <section class="why" id="about">
 
         <div class="container">
 
@@ -287,7 +291,7 @@
 
                 <span>Why SalonHub</span>
 
-                <h2>Everything You Need In One App</h2>
+                <h2>Everything You Need In One Premium Platform</h2>
 
             </div>
 
@@ -295,33 +299,61 @@
 
                 <div class="card">
 
-                    <i class="fa-solid fa-calendar-check"></i>
+                    <i class="fas fa-calendar-check"></i>
 
-                    <h3>Easy Booking</h3>
+                    <h3>Instant Booking</h3>
+
+                    <p>
+
+                        Book your favourite salon within seconds without
+                        waiting on phone calls or long queues.
+
+                    </p>
 
                 </div>
 
                 <div class="card">
 
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i class="fas fa-location-dot"></i>
 
                     <h3>Nearby Salons</h3>
 
+                    <p>
+
+                        Discover premium salons around your location with
+                        directions, ratings and available services.
+
+                    </p>
+
                 </div>
 
                 <div class="card">
 
-                    <i class="fa-solid fa-star"></i>
+                    <i class="fas fa-star"></i>
 
-                    <h3>Verified Ratings</h3>
+                    <h3>Verified Reviews</h3>
+
+                    <p>
+
+                        Make better decisions using authentic customer
+                        ratings and service reviews.
+
+                    </p>
 
                 </div>
 
                 <div class="card">
 
-                    <i class="fa-solid fa-bell"></i>
+                    <i class="fas fa-bell"></i>
 
-                    <h3>Notifications</h3>
+                    <h3>Smart Notifications</h3>
+
+                    <p>
+
+                        Receive instant reminders, booking confirmations
+                        and appointment updates.
+
+                    </p>
 
                 </div>
 
@@ -331,17 +363,21 @@
 
     </section>
 
-    <!--================ Features ================-->
+    <!--================ FEATURES ================-->
 
     <section class="features" id="features">
 
         <div class="container feature-container">
 
+            <!-- Phone Image -->
+
             <div class="feature-image">
 
-                <img src="images/hero/features-phone.png" alt="Feature">
+                <img src="images/hero/features-phone.png" alt="SalonHub Features">
 
             </div>
+
+            <!-- Content -->
 
             <div class="feature-content">
 
@@ -349,33 +385,62 @@
 
                     <span>Features</span>
 
-                    <h2>Designed For Customers</h2>
+                    <h2>Built For Modern Customers</h2>
 
                 </div>
 
+                <p>
+
+                    SalonHub combines premium design with powerful booking
+                    features to make every salon visit faster, easier and
+                    more convenient.
+
+                </p>
+
                 <ul>
 
-                    <li>Browse Premium Salons</li>
+                    <li>Browse Verified Salons</li>
 
                     <li>Instant Appointment Booking</li>
 
-                    <li>Manage Booking History</li>
+                    <li>Real-Time Booking Status</li>
 
-                    <li>Profile Management</li>
+                    <li>Manage Your Appointments</li>
 
-                    <li>Salon Reviews</li>
+                    <li>Favourite Salons</li>
 
-                    <li>Premium UI Experience</li>
+                    <li>Verified Ratings & Reviews</li>
+
+                    <li>Secure User Profile</li>
+
+                    <li>Premium User Experience</li>
 
                 </ul>
+
+                <div class="feature-box">
+
+                    <h3>
+
+                        Everything In One App
+
+                    </h3>
+
+                    <p>
+
+                        From discovering nearby salons to booking services,
+                        receiving reminders and managing appointments,
+                        SalonHub simplifies your entire grooming journey.
+
+                    </p>
+
+                </div>
 
             </div>
 
         </div>
 
     </section>
-
-    <!--================ Screenshots ================-->
+    <!--================ SCREENSHOTS ================-->
 
     <section class="screenshots" id="screenshots">
 
@@ -385,21 +450,21 @@
 
                 <span>Gallery</span>
 
-                <h2>App Screens</h2>
+                <h2>Beautiful. Fast. Intuitive.</h2>
 
             </div>
 
             <div class="slider">
 
-                <img src="images/screenshots/1.png">
+                <img src="images/screenshots/1.png" alt="SalonHub Home Screen">
 
-                <img src="images/screenshots/2.png">
+                <img src="images/screenshots/2.png" alt="Browse Salons Screen">
 
-                <img src="images/screenshots/3.png">
+                <img src="images/screenshots/3.png" alt="Salon Details Screen">
 
-                <img src="images/screenshots/4.png">
+                <img src="images/screenshots/4.png" alt="Appointment Booking Screen">
 
-                <img src="images/screenshots/5.png">
+                <img src="images/screenshots/5.png" alt="Profile Management Screen">
 
             </div>
 
@@ -407,7 +472,7 @@
 
     </section>
 
-    <!--================ Timeline ================-->
+    <!--================ HOW IT WORKS ================-->
 
     <section class="timeline" id="how">
 
@@ -417,41 +482,77 @@
 
                 <span>How It Works</span>
 
-                <h2>Start In Four Easy Steps</h2>
+                <h2>Book Your Appointment In Four Easy Steps</h2>
 
             </div>
 
-            <div class="steps">
+            <div class="timeline-wrapper">
 
-                <div class="step">
+                <div class="timeline-item">
 
-                    <span>01</span>
+                    <div class="timeline-number">01</div>
 
-                    <h3>Download App</h3>
+                    <div class="timeline-content">
 
-                </div>
+                        <h3>Download SalonHub</h3>
 
-                <div class="step">
+                        <p>
+                            Install the latest version of SalonHub and create
+                            your free customer account.
+                        </p>
 
-                    <span>02</span>
-
-                    <h3>Create Account</h3>
-
-                </div>
-
-                <div class="step">
-
-                    <span>03</span>
-
-                    <h3>Browse Salons</h3>
+                    </div>
 
                 </div>
 
-                <div class="step">
+                <div class="timeline-item">
 
-                    <span>04</span>
+                    <div class="timeline-number">02</div>
 
-                    <h3>Book Appointment</h3>
+                    <div class="timeline-content">
+
+                        <h3>Discover Nearby Salons</h3>
+
+                        <p>
+                            Search verified salons, compare ratings,
+                            services and pricing near your location.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-number">03</div>
+
+                    <div class="timeline-content">
+
+                        <h3>Select Your Service</h3>
+
+                        <p>
+                            Choose your preferred service, date,
+                            time slot and salon professional.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-number">04</div>
+
+                    <div class="timeline-content">
+
+                        <h3>Confirm & Relax</h3>
+
+                        <p>
+                            Receive instant confirmation and reminders
+                            before your scheduled appointment.
+                        </p>
+
+                    </div>
 
                 </div>
 
@@ -461,30 +562,75 @@
 
     </section>
 
-    <!--================ Download ================-->
+    <!--================ DOWNLOAD ================-->
 
-    <section class="download">
+    <section class="download" id="download">
 
-        <div class="container download-box">
+        <div class="container">
 
-            <h2>Ready To Experience SalonHub?</h2>
+            <div class="download-card">
 
-            <p>
+                <h2>Ready To Transform Your Grooming Experience?</h2>
 
-                Download the latest version and book appointments with just a few taps.
+                <p>
 
-            </p>
+                    Download SalonHub today and enjoy quick bookings,
+                    verified salons, smart reminders and a premium
+                    salon experience—all in one app.
 
-            <a href="apk/SalonHub.apk" class="btn-primary">
+                </p>
 
-                Download APK
+                <div class="download-buttons">
 
-            </a>
+                    <a href="apk/SalonHub.apk" class="store-btn" download>
+
+                        <i class="fas fa-download"></i>
+
+                        <div>
+
+                            <span>Download</span>
+
+                            <strong>Android APK</strong>
+
+                        </div>
+
+                    </a>
+
+                    <a href="#" class="store-btn">
+
+                        <i class="fab fa-google-play"></i>
+
+                        <div>
+
+                            <span>Coming Soon</span>
+
+                            <strong>Google Play</strong>
+
+                        </div>
+
+                    </a>
+
+                    <a href="#" class="store-btn">
+
+                        <i class="fab fa-apple"></i>
+
+                        <div>
+
+                            <span>Coming Soon</span>
+
+                            <strong>App Store</strong>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
-
     <!--================ FAQ ================-->
 
     <section class="faq" id="faq">
@@ -503,15 +649,21 @@
 
                 <div class="faq-item">
 
-                    <button>
+                    <div class="faq-question">
 
-                        Is SalonHub Free?
+                        <h3>Is SalonHub free to use?</h3>
 
-                    </button>
+                        <i class="fas fa-plus"></i>
 
-                    <div class="answer">
+                    </div>
 
-                        Yes. Customers can download and use SalonHub for free.
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. SalonHub is completely free for customers.
+                            Simply download the app, create an account and
+                            start booking appointments instantly.
+                        </p>
 
                     </div>
 
@@ -519,15 +671,65 @@
 
                 <div class="faq-item">
 
-                    <button>
+                    <div class="faq-question">
 
-                        How do I book appointments?
+                        <h3>Can I cancel or reschedule my appointment?</h3>
 
-                    </button>
+                        <i class="fas fa-plus"></i>
 
-                    <div class="answer">
+                    </div>
 
-                        Browse salons, choose your service and book instantly.
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. You can easily manage, cancel or reschedule
+                            your appointments directly from the app whenever
+                            the salon's policy allows.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <h3>How do I find nearby salons?</h3>
+
+                        <i class="fas fa-plus"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            SalonHub uses your location to recommend nearby
+                            salons with ratings, available services and
+                            appointment slots.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <h3>Is my personal information secure?</h3>
+
+                        <i class="fas fa-plus"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Absolutely. Your information is securely stored
+                            and protected using modern authentication and
+                            encrypted communication.
+                        </p>
 
                     </div>
 
@@ -539,7 +741,7 @@
 
     </section>
 
-    <!--================ Contact ================-->
+    <!--================ CONTACT ================-->
 
     <section class="contact" id="contact">
 
@@ -549,31 +751,88 @@
 
                 <span>Contact</span>
 
-                <h2>Let's Connect</h2>
+                <h2>We'd Love To Hear From You</h2>
 
             </div>
 
-            <form>
+            <div class="contact-container">
 
-                <input type="text" placeholder="Your Name">
+                <!-- Contact Information -->
 
-                <input type="email" placeholder="Email">
+                <div class="contact-info">
 
-                <textarea placeholder="Message"></textarea>
+                    <div class="contact-card">
 
-                <button type="submit">
+                        <i class="fas fa-envelope"></i>
 
-                    Send Message
+                        <div>
 
-                </button>
+                            <h3>Email</h3>
 
-            </form>
+                            <p>support@salonhub.app</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-card">
+
+                        <i class="fas fa-phone"></i>
+
+                        <div>
+
+                            <h3>Phone</h3>
+
+                            <p>+91 XXXXX XXXXX</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-card">
+
+                        <i class="fas fa-location-dot"></i>
+
+                        <div>
+
+                            <h3>Location</h3>
+
+                            <p>Odisha, India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Contact Form -->
+
+                <form class="contact-form">
+
+                    <input type="text" placeholder="Full Name" required>
+
+                    <input type="email" placeholder="Email Address" required>
+
+                    <textarea placeholder="Write your message..." required></textarea>
+
+                    <button type="submit" class="btn-primary">
+
+                        <i class="fas fa-paper-plane"></i>
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
 
         </div>
 
     </section>
 
-    <!--================ Premium Footer ================-->
+    <!--================ FOOTER ================-->
+
     <footer class="footer">
 
         <div class="container">
@@ -581,96 +840,131 @@
             <div class="footer-top">
 
                 <!-- Brand -->
+
                 <div class="footer-brand">
 
-                    <a href="#" class="footer-logo">
-                        <img src="assets/images/logo.png" alt="SalonHub Logo">
+                    <a href="#home" class="footer-logo">
+
+                        <img src="images/logo.png" alt="SalonHub Logo">
+
                         <span>SalonHub</span>
+
                     </a>
 
                     <p>
-                        SalonHub is a premium salon booking platform that connects
-                        customers with the best salons while helping businesses manage
-                        appointments, staff, services, and customers effortlessly.
+
+                        Book Better. Look Better.
+
+                        SalonHub connects customers with premium salons
+                        through a fast, secure and seamless booking
+                        experience.
+
                     </p>
 
                     <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="#" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+
                     </div>
 
                 </div>
 
                 <!-- Platform -->
+
                 <div class="footer-links">
 
-                    <h4>Platform</h4>
+                    <h3>Platform</h3>
 
-                    <a href="#home">Home</a>
-                    <a href="#features">Features</a>
-                    <a href="#how-it-works">How It Works</a>
-                    <a href="#faq">FAQs</a>
+                    <ul>
+
+                        <li><a href="#home">Home</a></li>
+
+                        <li><a href="#features">Features</a></li>
+
+                        <li><a href="#how">How It Works</a></li>
+
+                        <li><a href="#faq">FAQ</a></li>
+
+                    </ul>
 
                 </div>
 
                 <!-- Company -->
+
                 <div class="footer-links">
 
-                    <h4>Company</h4>
+                    <h3>Company</h3>
 
-                    <a href="#">About Us</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Blog</a>
+                    <ul>
+
+                        <li><a href="#about">About</a></li>
+
+                        <li><a href="#contact">Contact</a></li>
+
+                        <li><a href="#">Privacy Policy</a></li>
+
+                        <li><a href="#">Terms & Conditions</a></li>
+
+                    </ul>
 
                 </div>
 
                 <!-- Download -->
-                <div class="footer-contact">
 
-                    <h4>Get the App</h4>
+                <div class="footer-links">
 
-                    <p>
-                        Book appointments anytime, discover premium salons,
-                        and manage your grooming experience from your phone.
+                    <h3>Download</h3>
+
+                    <p style="margin-bottom:20px;">
+
+                        Get the latest Android version of SalonHub today.
+
                     </p>
 
-                    <div class="store-buttons">
+                    <a href="apk/SalonHub.apk" class="btn-primary" download>
 
-                        <a href="#" class="store-btn">
-                            <i class="fab fa-google-play"></i>
-                            <div>
-                                <small>GET IT ON</small>
-                                <span>Google Play</span>
-                            </div>
-                        </a>
+                        <i class="fas fa-download"></i>
 
-                        <a href="#" class="store-btn">
-                            <i class="fab fa-apple"></i>
-                            <div>
-                                <small>Download on the</small>
-                                <span>App Store</span>
-                            </div>
-                        </a>
+                        Download APK
 
-                    </div>
+                    </a>
 
                 </div>
 
             </div>
 
+            <div class="footer-divider"></div>
+
             <div class="footer-bottom">
 
                 <p>
+
                     © 2026 SalonHub. All Rights Reserved.
+
                 </p>
 
                 <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Cookie Policy</a>
+
+                    <a href="#">Privacy</a>
+
+                    <a href="#">Terms</a>
+
+                    <a href="#">Cookies</a>
+
                 </div>
 
             </div>
@@ -679,14 +973,19 @@
 
     </footer>
 
-    <!-- JS -->
+    <!--================ BACK TO TOP ================-->
+
+    <a href="#home" class="back-to-top" aria-label="Back to Top">
+
+        <i class="fas fa-arrow-up"></i>
+
+    </a>
+
+    <!--================ JAVASCRIPT ================-->
 
     <script src="js/main.js"></script>
-
     <script src="js/slider.js"></script>
-
     <script src="js/animation.js"></script>
-
 </body>
 
 </html>
